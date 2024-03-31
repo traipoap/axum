@@ -1,0 +1,10 @@
+/Users/traipoaphunthong/Desktop/rust/target/release/deps/libversion_check-6509bebf4cae5b3d.rmeta: /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/lib.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/version.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/channel.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/date.rs
+
+/Users/traipoaphunthong/Desktop/rust/target/release/deps/libversion_check-6509bebf4cae5b3d.rlib: /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/lib.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/version.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/channel.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/date.rs
+
+/Users/traipoaphunthong/Desktop/rust/target/release/deps/version_check-6509bebf4cae5b3d.d: /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/lib.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/version.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/channel.rs /Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/date.rs
+
+/Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/lib.rs:
+/Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/version.rs:
+/Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/channel.rs:
+/Users/traipoaphunthong/.cargo/registry/src/index.crates.io-6f17d22bba15001f/version_check-0.9.4/src/date.rs:
