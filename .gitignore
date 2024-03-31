@@ -1,2 +1,2 @@
 .DS_Store
-target/*
+target/CACHEDIR.TAG target/debug target/release
