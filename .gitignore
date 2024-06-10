@@ -1,2 +1,4 @@
 .DS_Store
 target
+frontend/.next
+frontend/node_modules
