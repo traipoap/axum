@@ -79,6 +79,28 @@ export default function Topgroup() {
         <div className="menu-left">
           <TabGroup>
             <TabList className="gap-4">
+              <div className="menu-right flex gap-4 ml-auto">
+                  <Field className="flex gap-4 ml-auto">
+                    <Input
+                      type="text"
+                      placeholder="Username"
+                      className={clsx(
+                        'inline-block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm text-white',
+                        'focus:outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-white/25'
+                      )}
+                    />
+                    <Input
+                      type="password"
+                      placeholder="Password"
+                      className={clsx(
+                        'inline-block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm text-white',
+                        'focus:outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-white/25'
+                      )}
+                    />
+                    <Button className='w-full rounded-full py-1 px-3 text-sm font-semibold text-white focus:outline-none hover:bg-white/5 focus:bg-white/10'>Sign In</Button>
+                    <Button className="rounded-full py-1 px-3 text-sm font-semibold text-white focus:outline-none hover:bg-white/5 focus:bg-white/10">Register</Button>
+                  </Field>
+                </div>
               {categories.map(({ name }) => (
                 <Tab
                   key={name}
@@ -88,40 +110,7 @@ export default function Topgroup() {
                 </Tab>
               ))}
             </TabList>
-          </TabGroup>
-        </div>
-        <div className="menu-right">
-          <Field className="gap-4 flex"> 
-            <Input
-              type="Username"
-              placeholder="Username"
-              className={clsx(
-                'inline-block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
-                'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
-              )}
-            />
-            <Input
-              type="Password"
-              placeholder="Password"
-              className={clsx(
-                'inline-block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm/6 text-white',
-                'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25'
-              )}
-            />
-            <Button className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">
-            SignIn
-            </Button>
-            <Button className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white">
-            Register
-            </Button>
-          </Field>
-        </div>
-      </div>
-      <div className='main'>
-        <div className="flex h-screen w-full justify-left pt-4 px-4">
-          <div className="w-full max-w-md">
-            <TabGroup>
-              <TabPanels className="mt-3">
+            <TabPanels className="mt-3">
                 {categories.map(({ name, posts }) => (
                   <TabPanel key={name} className="rounded-xl bg-white/5 p-3">
                     <ul>
@@ -144,7 +133,14 @@ export default function Topgroup() {
                   </TabPanel>
                 ))}
               </TabPanels>
-            </TabGroup>
+          </TabGroup>
+        </div>
+
+      </div>
+      <div className='footer'>
+        <div className="flex h-screen w-full justify-left pt-4 px-4">
+          <div className="w-full max-w-md">
+
           </div>
         </div>
       </div>
