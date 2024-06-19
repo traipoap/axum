@@ -1,10 +1,13 @@
-import { Tab, TabGroup, TabList, TabPanel, TabPanels, Field, Input, Button } from '@headlessui/react'
+'use client'
+
+import { Tab, TabGroup, TabList, TabPanel, TabPanels, Field, Input, Button} from '@headlessui/react'
 import clsx from 'clsx'
 import "./globals.css"
 import OrderForm from './OrderForm'
 import TradeChart from './TradeChart'
 
 export default function Topgroup() {
+  
   return (
     <div className='background'>
       <div className="header">
@@ -35,6 +38,8 @@ export default function Topgroup() {
                     <TradeChart />
                   </div>
                 </div>
+              </TabPanel>
+              <TabPanel className="bg-black/5 p-3">
               </TabPanel>
             </TabPanels>
           </TabGroup>
