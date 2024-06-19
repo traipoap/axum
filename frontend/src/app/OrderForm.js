@@ -74,7 +74,15 @@ export default function OrderForm() {
                 </div>
               </TabPanel>
               <TabPanel className="bg-black/5">
-              Order
+                <div className="mb-3 py-3">
+                  <Button className='rounded-md py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-black/5 focus:bg-black/10'>ยกเลิก</Button>
+                </div>
+                <div className="mb-3 py-3">
+                  <Button className='rounded-md py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-black/5 focus:bg-black/10'>ยกเลิก</Button>
+                </div>
+                <div className="mb-3 py-3">
+                  <Button className='rounded-md py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-black/5 focus:bg-black/10'>ยกเลิก</Button>
+                </div>
               </TabPanel>
             </TabPanels>
           </TabGroup>
