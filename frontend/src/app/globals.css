@@ -4,15 +4,15 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
   }
 }
 
@@ -35,17 +35,30 @@ body {
 .header {
   display: flex; /* กำหนดให้ใช้ flexbox layout */
   padding: 20px;
-
 }
 
 .menu-left, .menu-right {
   flex: 1; /* ให้คอลัมน์ทั้งสองใช้พื้นที่เท่ากัน */
 }
 
-.main {
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
+.body {
+  height: 100px;
+  width: 100%;
+  color: black;
+  text-align: left;
 }
 
 .footer {
-  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+  text-align: center;
 }

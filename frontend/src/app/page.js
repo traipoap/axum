@@ -1,148 +1,55 @@
-import { Tab, TabGroup, TabList, TabPanel, TabPanels, Field, Input, Button} from '@headlessui/react'
+import { Tab, TabGroup, TabList, TabPanel, TabPanels, Field, Input, Button } from '@headlessui/react'
 import clsx from 'clsx'
-import "./globals.css";
-
-const categories = [
-  {
-    name: 'Trading',
-    posts: [
-      {
-        id: 1,
-        title: 'THB/BTC',
-        date: 'Jan 7',
-        commentCount: 29,
-        shareCount: 16,
-      },
-      {
-        id: 2,
-        title: "THB/XRP",
-        date: '2h ago',
-        commentCount: 3,
-        shareCount: 2,
-      },
-    ],
-  },
-  {
-    name: 'TradeView',
-    posts: [
-      {
-        id: 1,
-        title: 'Is tech making coffee better or worse?',
-        date: 'Jan 7',
-        commentCount: 29,
-        shareCount: 16,
-      },
-    ],
-  },
-  {
-    name: 'My funds',
-    posts: [
-      {
-        id: 1,
-        title: 'Ask Me Anything: 10 answers to your questions about coffee',
-        date: '2d ago',
-        commentCount: 9,
-        shareCount: 5,
-      },
-    ],
-  },
-  {
-    name: 'Security',
-    posts: [
-      {
-        id: 1,
-        title: 'Ask Me Anything: 10 answers to your questions about coffee',
-        date: '2d ago',
-        commentCount: 9,
-        shareCount: 5,
-      },
-    ],
-  },
-  {
-    name: 'Info',
-    posts: [
-      {
-        id: 1,
-        title: 'Ask Me Anything: 10 answers to your questions about coffee',
-        date: '2d ago',
-        commentCount: 9,
-        shareCount: 5,
-      },
-    ],
-  },
-]
+import "./globals.css"
+import OrderForm from './OrderForm'
+import TradeChart from './TradeChart'
 
 export default function Topgroup() {
   return (
     <div className='background'>
       <div className="header">
         <div className="menu-left">
+          <div className="menu-right flex gap-1 ml-auto">
+            <Field className="flex gap-1 ml-auto">
+              <Input type="text" placeholder="Username" className={clsx('inline-block w-full rounded-lg border-none bg-black/5 py-1.5 px-3 text-sm', 'focus:outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-black/25')}/>
+              <Input type="password" placeholder="Password" className={clsx('inline-block w-full rounded-lg border-none bg-black/5 py-1.5 px-3 text-sm', 'focus:outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-black/25')}/>
+              <Button className='w-full rounded-md py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-black/5 focus:bg-black/10'>SIGN IN</Button>
+              <Button className="w-full rounded-md py-1 px-3 text-sm font-semibold focus:outline-none hover:bg-black/5 focus:bg-black/10">REGISTER</Button>
+            </Field>
+          </div>
           <TabGroup>
-            <TabList className="gap-4">
-              <div className="menu-right flex gap-4 ml-auto">
-                  <Field className="flex gap-4 ml-auto">
-                    <Input
-                      type="text"
-                      placeholder="Username"
-                      className={clsx(
-                        'inline-block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm text-white',
-                        'focus:outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-white/25'
-                      )}
-                    />
-                    <Input
-                      type="password"
-                      placeholder="Password"
-                      className={clsx(
-                        'inline-block w-full rounded-lg border-none bg-white/5 py-1.5 px-3 text-sm text-white',
-                        'focus:outline-none focus:outline-2 focus:-outline-offset-2 focus:outline-white/25'
-                      )}
-                    />
-                    <Button className='w-full rounded-full py-1 px-3 text-sm font-semibold text-white focus:outline-none hover:bg-white/5 focus:bg-white/10'>Sign In</Button>
-                    <Button className="rounded-full py-1 px-3 text-sm font-semibold text-white focus:outline-none hover:bg-white/5 focus:bg-white/10">Register</Button>
-                  </Field>
-                </div>
-              {categories.map(({ name }) => (
-                <Tab
-                  key={name}
-                  className="rounded-full py-1 px-3 text-sm/6 font-semibold text-white focus:outline-none data-[selected]:bg-white/10 data-[hover]:bg-white/5 data-[selected]:data-[hover]:bg-white/10 data-[focus]:outline-1 data-[focus]:outline-white"
-                >
-                  {name}
-                </Tab>
-              ))}
+            <TabList className="flex p-3">
+              <Tab className="rounded-md py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-black/10 data-[hover]:bg-black/5 data-[selected]:data-[hover]:bg-black/10 data-[focus]:outline-1 data-[focus]:outline-black">Trading</Tab>
+              <Tab className="rounded-md py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-black/10 data-[hover]:bg-black/5 data-[selected]:data-[hover]:bg-black/10 data-[focus]:outline-1 data-[focus]:outline-black">TradeView</Tab>
+              <Tab className="rounded-md py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-black/10 data-[hover]:bg-black/5 data-[selected]:data-[hover]:bg-black/10 data-[focus]:outline-1 data-[focus]:outline-black">My funds</Tab>
+              <Tab className="rounded-md py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-black/10 data-[hover]:bg-black/5 data-[selected]:data-[hover]:bg-black/10 data-[focus]:outline-1 data-[focus]:outline-black">Security</Tab>
+              <Tab className="rounded-md py-1 px-3 text-sm/6 font-semibold focus:outline-none data-[selected]:bg-black/10 data-[hover]:bg-black/5 data-[selected]:data-[hover]:bg-black/10 data-[focus]:outline-1 data-[focus]:outline-black">Info</Tab>
             </TabList>
             <TabPanels className="mt-3">
-                {categories.map(({ name, posts }) => (
-                  <TabPanel key={name} className="rounded-xl bg-white/5 p-3">
-                    <ul>
-                      {posts.map((post) => (
-                        <li key={post.id} className="relative rounded-md p-3 text-sm/6 transition hover:bg-white/5">
-                          <a href="#" className="font-semibold text-white">
-                            <span className="absolute inset-0" />
-                            {post.title}
-                          </a>
-                          <ul className="flex gap-2 text-white/50" aria-hidden="true">
-                            <li>{post.date}</li>
-                            <li aria-hidden="true">&middot;</li>
-                            <li>{post.commentCount} comments</li>
-                            <li aria-hidden="true">&middot;</li>
-                            <li>{post.shareCount} shares</li>
-                          </ul>
-                        </li>
-                      ))}
-                    </ul>
-                  </TabPanel>
-                ))}
-              </TabPanels>
+              <TabPanel className="bg-black/5 p-3">
+                <div className="flex flex-wrap bg-black/5">
+                  <div className="w-full md:w-1/2 bg-black/5">
+                    <OrderForm />
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <TradeChart />
+                  </div>
+                </div>
+              </TabPanel>
+            </TabPanels>
           </TabGroup>
         </div>
-
+      </div>
+      <div className='body flex gap-4 justify-center'>
+        <div className="flex p-3 px-3 py-3 md:w-1/3 bg-black/5 rounded-md">การค้าล่าสุด
+        </div>
+        <div className="flex p-3 px-3 py-3 md:w-1/3 bg-black/5 rounded-md">ออเดอร์ซิ้อ
+        </div>
+        <div className="flex p-3 px-3 py-3 md:w-1/3 bg-black/5 rounded-md">ออเดอร์ขาย
+        </div>
       </div>
       <div className='footer'>
-        <div className="flex h-screen w-full justify-left pt-4 px-4">
-          <div className="w-full max-w-md">
-
-          </div>
-        </div>
+        bitdoin.in.th
       </div>
     </div>     
   )
